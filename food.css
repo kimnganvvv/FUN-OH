@@ -107,11 +107,6 @@ header{
 }
 /*NAV*/
 /* styles.css */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
 
 .slideshow {
     position: relative;
@@ -122,6 +117,7 @@ body {
 
 .slide {
     display: none;
+    unicode-bidi: isolate;
 }
 
 img {
