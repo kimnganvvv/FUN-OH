@@ -60,7 +60,7 @@
             </h>
             <div class="search flex" id="searchForm">
                 <input type="search" id="searchInput" placeholder="Tìm món ăn" >
-                <div><i class="fas fa-search"></i></div>
+                <input type="submit" name="timkiem" value="Tìm kiếm">
             </div >
             <div class="cart"><i class="fas fa-shopping-cart"></i></div>
             <div class="user">
@@ -112,20 +112,19 @@
             let slideIndex = 0;
             const slides = document.querySelectorAll('.slide');
             function showSlides() {
-                // Ẩn tất cả các slide
+                // Ẩn 
                 slides.forEach((slide) => {
                     slide.style.display = 'none';
                 });
-                // Tăng chỉ số slide
                 slideIndex++;
-                // Nếu chỉ số vượt quá số lượng slide, quay lại slide đầu tiên
+                
                 if (slideIndex > slides.length) {
                     slideIndex = 1;} 
                 // Hiển thị slide hiện tại
                 slides[slideIndex - 1].style.display = 'block';
-                // Thay đổi slide sau mỗi 3 giây (3000ms)
+                // Thay đổi slide sau mỗi 3 giây
                 setTimeout(showSlides, 3000);}
-            // Khởi động slideshow
+                
             showSlides();
         </script>
     </nav>

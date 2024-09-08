@@ -32,23 +32,18 @@ header{
     position: absolute;
     left: 55%;
 }
-.menu>div.search>div{
-    height: 11px;
-    padding: 10px;
-    border: 1.5px solid white;
-    border-radius: 0 4px 4px 0;
-    position: relative;
-    background-color: #ea320d;  
-    left:0;
-}
-.menu>div.search>input{
-    height: 30px;
+.menu>.search>input:first-child{
+    height: 27px;
     width: 200px;
    border-right: none;
    border: 1px solid white;
-   border-radius: 4px 0 0 4px;
+   border-radius: 2px;
    font-size: 15px;
-   margin: 1.5px;
+   margin:2px;
+}
+.menu>.search>input:last-child{
+    height:30px;
+    font-size: 15px;
 }
 .menu>div.user{
     margin-left: auto;
@@ -177,6 +172,7 @@ img {
     position: relative;
     border: 1px ridge rgb(215, 214, 214);
     background-color: rgb(243, 239, 238);
+    cursor: pointer;
 }
 
 .product>div>img{
