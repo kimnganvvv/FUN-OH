@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FUN~OH">
+    <meta name="keywords" content="Đặt món ăn, food, thành phố Hồ Chí Minh">
+    <title>FUN~OH</title>
+    <link rel="stylesheet" href="food.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="food.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#goTop").hide()
+
+            $(window).scroll(function(){
+
+                if($(this).scrollTop() >= 100)
+                    $("header").css({
+                        "position":"fixed",
+                        "left": 0,
+                        "right": 0,
+                        "top":0,
+                        "z-index": 1000
+                    })
+                else
+                    $("header").css({
+                        "position":"relative",
+                        "left": 0,
+                        "right": 0,
+                        "top":0,
+                        "z-index": 1000
+                    })
+
+
+                if($(this).scrollTop() >= 100)
+                    $("#goTop").show("flow")
+                else
+                    $("#goTop").hide("flow")
+
+            })
+
+            $("#goTop").click(function(){
+                $("html, body").animate({
+                        scrollTop:0
+                    },800);
+            })
+        })
+    </script>
+</head>
+<body>
+    <div >
+        <a id="goTop" href="javascript:;"><img src="img/top.png" alt="top"></a>
+    </div>
+    <header>
+        <div class="menu flex">
+            <h>
+                <a href="index.html"><img src="img/brand.png" alt="brand"></a>
+            </h>
+            <div class="search flex" id="searchForm">
+                <input type="search" id="searchInput" placeholder="Tìm món ăn" >
+                <div><i class="fas fa-search"></i></div>
+            </div >
+            <div class="cart"><i class="fas fa-shopping-cart"></i></div>
+            <div class="user">
+                <i class="fas fa-user-circle"></i>
+                <h><a href="dangki.html">Đăng ký</a> / <a href="dangnhap.html">Đăng nhập</a></h>
+            </div>
+        </div>
+        <script>
+             $(document).ready(function(){
+                $("div.home>div>a").click(function(){
+                    event.preventDefault()
+                    //xu ly tab
+                    $("div.home>div>a").removeClass("active")
+                    $(this).addClass("active")
+
+                    //xu ly content
+                    var home=$(this).attr("href")
+                    $(".products>div>p").hide()
+                    $(".products>div>div").hide()
+                    $(home).show()
+            })
+             })
+        </script>
+        <div class="home flex">
+            <h><a id="Home" href="index.html"><img src="img/logo.png" alt="logo"></a></h>
+            <div><a href="#drink">Thức uống</a></div>
+            <div><a href="#rice">Cơm hộp</a></div>
+            <div><a href="#noodle">Mì phở</a></div>
+            <div><a href="#desert">Tráng miệng</a></div>
+            <div><a href="#other">Khác</a></div>
+        </div> 
+    </header>
+    <nav>
+        <div class="slideshow">
+            <div class="slide fade">
+                <img src="img/combokfc.jpg" alt="combokfc">
+            </div>
+            <div class="slide fade">
+                <img src="img/combobuncha.jpg" alt="combobuncha">
+            </div>
+            <div class="slide fade">
+                <img src="img/epthom.jpg" alt="nuocepthom">
+            </div>
+            <div class="slide fade">
+                <img src="img/khucbach.jpg" alt="khucbachsieudao">
+            </div>
+        </div>
+    </nav>
+        <main>
+            <section class="products" >
+                <div class="drink">
+                    <p >THỨC UỐNG</p>
+                    <div class="flex" id="drink">
+                        <div class="product">
+                            <div>
+                                <img src="img/nuocepthom.jpg" alt="nuocepthom">
+                                <div>
+                                    <p>Nước Ép Thơm</p>
+                                    <p>ReViet Juice - Nước Ép, Sinh Tố & Detox - Hồ Bá Kiện</p>
+                                    <span class="dong"><sup><u>đ</u></sup></span><span class="price">30.000<span class="discount">-25%</span></span>
+                                    <p>150A Hồ Bá Kiện, P.15, Quận 10, TP. HCM</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div>
+                                <img src="img/suadaunanh.jpg" alt="suadaunanh">
+                                <div>
+                                    <p>Sữa Đậu Nành Tuyết Yến Thượng Hạng</p>
+                                    <p>Đậu Má Mix - Đậu Nành & Rau Má - Lê Quang Định</p>
+                                    <span class="dong"><sup><u>đ</u></sup></span><span class="price">19.950<span class="discount">-5%</span></span>
+                                    <p>226 Lê Quang Định, P. 14, Bình Thạnh, TP. HCM</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div>
+                                <img src="img/trasua.jpg" alt="trasua">
+                                <div>
+                                    <p>Trà Sữa Trân Châu Đen</p>
+                                    <p>Trà Sữa Gong Cha - 貢茶 - Phan Văn Trị</p>
+                                    <span class="dong"><sup><u>đ</u></sup></span><span class="price">47.000</span>
+                                    <p>507 Phan Văn Trị, P. 5, Gò Vấp, TP. HCM</p> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div>
+                                <img src="img/hongtradao.jpg" alt="hongtradao">
+                                <div>
+                                    <p>Hồng Trà Đào</p>
+                                    <p>Hồng Trà Ngô Gia - Lê Lai</p>
+                                    <span class="dong"><sup><u>đ</u></sup></span><span class="price">29.000</span>
+                                    <p>40 Lê Lai, P. Bến Thành, Quận 1, TP. HCM</p> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="desert">
+                    <p>TRÁNG MIỆNG</p>
+                    <div class="flex" id="desert">
+                        <div class="product">
+                            <div>
+                                <img src="img/khucbachsieudao.jpg" alt="che">
+                                <div>
+                                    <p>Khúc Bạch Siêu Đào</p>
+                                    <p>An Vy - Chè Ngon Ít Ngọt - Phan Huy Thực</p>
+                                    <span class="dong"><sup><u>đ</u></sup></span><span class="price">20.000<span class="discount">-43%</span></span>
+                                    <p>39 Phan Huy Thực, P. Tân Kiểng, Quận 7, TP. HCM</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div>
+                                <img src="img/raucau.jpg" alt="raucau">
+                                <div>
+                                    <p>Rau Câu Cheese Cafe(Hũ 100ml)</p>
+                                    <p>AN AN Jelly Cake - Thế Giới Rau Câu</p>
+                                    <span class="dong"><sup><u>đ</u></sup></span><span class="price">15.000</span>
+                                    <p>192/18 Nguyễn Văn Luông, P. 11, Quận 6, TP. HCM</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div>
+                                <img src="img/banhsuatuoi.jpg" alt="banhsuatuoi">
+                                <div>
+                                    <p>Bánh Sữa Tươi</p>
+                                    <p>Oops! - Trà Sữa & Tráng Miệng - Crescent Mall</p>
+                                    <span class="dong"><sup><u>đ</u></sup></span><span class="price">32.000</span>
+                                    <p>Tầng 5, 5FC-K6, Tầng 5, Crescent Mall, 101 Tôn Dật Tiên, P. Tân Phú, Quận 7, TP. HCM</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div>
+                                <img src="img/banhtarttrung.jpg" alt="tarttrung">
+                                <div>
+                                    <p>Bánh Tart Trứng Phô Mai Hạnh Nhân</p>
+                                    <p>Tiệm Bánh & Tráng Miệng Bánh Nhà - Bánh Tart Hạnh Nhân - Phan Xích Long</p>
+                                    <span class="dong"><sup><u>đ</u></sup></span><span class="price">19.000</span>
+                                    <p>293/2/8 Phan Xích Long, P. 1, Phú Nhuận, TP. HCM</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rice">
+                    <p>CƠM HỘP</p>
+                    <div class="flex" id="rice">
+                        <div class="product" >
+                            <div>
+                                <img src="img/comtam.jpg" alt="comtam">
+                                <div>
+                                    <p>Cơm Tấm Sườn Bì Chả</p>
+                                    <p>Cơm Tấm 3 Chị Em - Lò Gốm</p>
+                                    <span class="dong"><sup><u>đ</u></sup></span><span class="price">62.000<span class="discount">-5%</span></span>
+                                    <p>703 Lò Gốm, P. 9, Quận 6, TP. HCM</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div>
+                                <img src="img/comgaxoimo.jpg" alt="comgaxoimo">
+                                <div>
+                                    <p>Cơm Gà Xối Mỡ</p>
+                                    <p>Bento Delichi - Cơm Gà Xối Mỡ, Cơm Gà Mắm Tỏi - Quận 4</p>
+                                    <span class="dong"><sup><u>đ</u></sup></span><span class="price">59.000<span class="discount">-5%</span></span>
+                                    <p>5 Đường Số 33, P. 4, Quận 4, TP. HCM</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div>
+                                <img src="img/comgasottieuxanh.jpg" alt="comgaxottieuxanh">
+                                <div>
+                                    <p>Cơm Gà Xốt Tiêu Xanh Nhỏ Mini</p>
+                                    <p>Mamadeli - Cơm Gà & Mì Ý - Trần Xuân Soạn</p>
+                                    <span class="dong"><sup><u>đ</u></sup></span><span class="price">45.000</span>
+                                    <p>1041/62/34 Trần Xuân Soạn, P. Tân Hưng, Quận 7, TP. HCM</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div>
+                                <img src="img/comheochien.jpg" alt="comheochien">
+                                <div>
+                                    <p>Cơm Heo Chiên(Tonkatsu)</p>
+                                    <p>Osaka - Cơm Thố Nhật Bản</p>
+                                    <span class="dong"><sup><u>đ</u></sup></span><span class="price">59.000</span>
+                                    <p>64 Nguyễn Thời Trung, P. 6, Quận 5, TP. HCM</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="noddle">
+                    <p>MÌ PHỞ</p>
+                    <div class="flex" id="noodle">
+                            <div class="product" >
+                                <div>
+                                    <img src="img/buncha.jpg" alt="buncha">
+                                    <div>
+                                        <p>Combo Bún chả + Trà tắc</p>
+                                        <p>Bún Chả Hà Nội 1982 - Hoa Cúc</p>
+                                        <span class="dong"><sup><u>đ</u></sup></span><span class="price">52.500<span class="discount">-25%</span></span>
+                                     <p>84 Hoa Cúc, P. 7, Phú Nhuận, TP. HCM</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product">
+                                <div>
+                                    <img src="img/photai.jpg" alt="photai">
+                                    <div>
+                                        <p>Phở Tái</p>
+                                        <p>Phở Anh - Tân Sơn Nhì</p>
+                                        <span class="dong"><sup><u>đ</u></sup></span><span class="price">63.000</span>
+                                        <p>281 Đ. Tân Sơn Nhì, P. Tân Sơn Nhì, Tân Phú, TP. HCM</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product">
+                                <div>
+                                    <img src="img/bunrieu.jpg" alt="bunrieu">
+                                    <div>
+                                        <p>Bún Riêu Cua Chả Thịt + Giò Gân</p>
+                                        <p>Bún Riêu Miền Tây Út Hồng</p>
+                                        <span class="dong"><sup><u>đ</u></sup></span><span class="price">55.000</span>
+                                        <p>151 Âu Cơ, P. 14, Quận 11, TP. HCM</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product">
+                                <div>
+                                    <img src="img/mitron.jpg" alt="mitron">
+                                    <div>
+                                        <p>Mì Trộn Thập Cẩm Nhiều Mì</p>
+                                        <p>Mì Phố - Mì Trộn Indomie - Trần Văn Đang</p>
+                                        <span class="dong"><sup><u>đ</u></sup></span><span class="price">39.000</span>
+                                        <p>21/3 Trần Văn Đang, P. 9, Quận 3, TP. HCM</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <div class="other">
+                    <p>KHÁC</p>
+                    <div class="flex" id="other">
+                        <div class="product" >
+                            <div>
+                                <img src="img/kfc.jpg" alt="garankfc">
+                                <div>
+                                    <p>Combo Cơm Trưa Phi-lê Gà Quay</p>
+                                    <p>Gà Rán KFC - Phạm Văn Chiêu</p>
+                                    <span class="dong"><sup><u>đ</u></sup></span><span class="price">44.000<span class="discount">-33%</span></span>
+                                    <p>84 Phạm Văn Chiêu, P. 9, Gò Vấp, TP. HCM</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div>
+                                <img src="img/comgasottieuxanh.jpg" alt="comgaxottieuxanh">
+                                <div>
+                                    <p>Combo 1: 1 Gà nướng + 1 ống cơm lam + 4 bánh bao chiên</p>
+                                    <p>Gà Nướng, Cơm Lam & Sườn Cay Nướng Đỗ Gia - Huỳnh Tấn Phát</p>
+                                    <span class="dong"><sup><u>đ</u></sup></span><span class="price">220.000</span>
+                                    <p>2086 Huỳnh Tấn Phát, TT. Nhà Bè, Nhà Bè, TP. HCM</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div>
+                                <img src="img/nemnuong.jpg" alt="nemnuong">
+                                <div>
+                                    <p>Nem nướng cuốn bánh tráng (nguyên cây nem)</p>
+                                    <p>Nem Ngon Quán - Nem Nướng Nha Trang - Đỗ Xuân Hợp</p>
+                                    <span class="dong"><sup><u>đ</u></sup></span><span class="price">109.000</span>
+                                    <p>Chung Cư Ehome S Căn B006, Đỗ Xuân Hợp, P. Phú Hữu, Thành Phố Thủ Đức, TP. HCM</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div>
+                                <img src="img/banhtrang.jpg" alt="banhtrang">
+                                <div>
+                                    <p>Bánh Tráng Tôm Khô Tóp Mỡ Rim Hành</p>
+                                    <p>Bánh Tráng Tóp Mỡ Trứng Lòng Đào - Thèm Gì Cũng Có - Ngô Tất Tố</p>
+                                    <span class="dong"><sup><u>đ</u></sup></span><span class="price">37.000</span>
+                                    <p>42 Ngô Tất Tố, P. 19, Bình Thạnh, TP. HCM</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    <footer>
+        <div class="info">
+        <p><b>Trụ sở chính:</b> 35 – 37 Hồ Hảo Hớn, Phường Cô Giang, Quận 1, TP. HCM.</p>
+        <p><b>Địa chỉ liên hệ: </b>Khu dân cư Nhơn Đức, huyện Nhà Bè, TP.HCM</p>
+        <p><b>Điện thoại liên hệ: </b>028 3836 4748</p>
+        <p><b>Email: </b><a href="mailto:Fun0hFood@gmail.com?subject=Góp Ý">Fun0hFood@gmail.com</a></p>
+        <div>
+            <img src="img/logo.png" alt="logo">
+        </div>
+        <p>&copy FUN~OH 2024</p>
+    </div>
+    </footer>
+</body>
+</html>
