@@ -28,6 +28,13 @@ header{
     width: 30% ;
 }
 
+.menu>div.search{
+    position: absolute;
+    left: 55%;
+    margin: 5px;
+}
+
+
 .menu>div.user{
     margin-left: auto;
 }
@@ -123,6 +130,8 @@ img {
 .info{
     text-indent: 15px;
     padding: 2%;
+    border-top: 1px solid gray;
+    background-color: #f8e160;
 }
 
  .info>div>img{
@@ -164,7 +173,7 @@ img {
 }
 
 .product>div>div{
-    margin: 5px;
+    margin: 10px;
     border-top: 1px ridge rgb(215, 214, 214);
 }
 .product>div>div>p{
@@ -214,8 +223,8 @@ a#goTop>img{
     width: 4%;
     display: block;
     position: fixed;
-    bottom: 40px;
-    right: 10px;
+    bottom: 5%;
+    right: 2%;
     z-index: 1000;
 }
 

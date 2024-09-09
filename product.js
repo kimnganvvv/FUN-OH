@@ -9,7 +9,6 @@ $(document).ready(function(){
         var home=$(this).attr("href")
         $(".products>div>p").hide()
         $(".products>div>div").hide()
-        $(".slideshow").hide()
         $(home).show()
 })
  })
