@@ -9,45 +9,7 @@
     <link rel="stylesheet" href="food.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="food.js"></script>
-    <script>
-        $(document).ready(function() {
-            $("#goTop").hide()
-
-            $(window).scroll(function(){
-
-                if($(this).scrollTop() >= 100)
-                    $("header").css({
-                        "position":"fixed",
-                        "left": 0,
-                        "right": 0,
-                        "top":0,
-                        "z-index": 1000
-                    })
-                else
-                    $("header").css({
-                        "position":"relative",
-                        "left": 0,
-                        "right": 0,
-                        "top":0,
-                        "z-index": 1000
-                    })
-
-
-                if($(this).scrollTop() >= 100)
-                    $("#goTop").show("flow")
-                else
-                    $("#goTop").hide("flow")
-
-            })
-
-            $("#goTop").click(function(){
-                $("html, body").animate({
-                        scrollTop:0
-                    },800);
-            })
-        })
-    </script>
+    <script src="goTop.js"></script>
 </head>
 <body>
     <div >
@@ -61,7 +23,7 @@
             <div class="search flex" id="searchForm">
                 <input type="search" id="searchInput" placeholder="Tìm món ăn" >
                 <div><input type="submit" name="timkiem" value="Tìm kiếm"></div>
-                <script src="food.js"></script>
+                <script src="search.js"></script>
             </div >
             <div class="cart"><i class="fas fa-shopping-cart"></i></div>
             <div class="user">
@@ -69,22 +31,7 @@
                 <h><a href="dangki.html">Đăng ký</a> / <a href="dangnhap.html">Đăng nhập</a></h>
             </div>
         </div>
-        <script>
-             $(document).ready(function(){
-                $("div.home>div>a").click(function(){
-                    event.preventDefault()
-                    //xu ly tab
-                    $("div.home>div>a").removeClass("active")
-                    $(this).addClass("active")
-
-                    //xu ly content
-                    var home=$(this).attr("href")
-                    $(".products>div>p").hide()
-                    $(".products>div>div").hide()
-                    $(home).show()
-            })
-             })
-        </script>
+        <script src="slideshow.js"></script>
         <div class="home flex">
             <h><a id="Home" href="index.html"><img src="img/logo.png" alt="logo"></a></h>
             <div><a href="#drink">Thức uống</a></div>
@@ -109,26 +56,7 @@
                 <img src="img/khucbach.jpg" alt="khucbachsieudao">
             </div>
         </div>
-        <script>
-            let slideIndex = 0;
-            const slides = document.querySelectorAll('.slide');
-            function showSlides() {
-                // Ẩn tất cả các slide
-                slides.forEach((slide) => {
-                    slide.style.display = 'none';
-                });
-                // Tăng chỉ số slide
-                slideIndex++;
-                // Nếu chỉ số vượt quá số lượng slide, quay lại slide đầu tiên
-                if (slideIndex > slides.length) {
-                    slideIndex = 1;} 
-                // Hiển thị slide hiện tại
-                slides[slideIndex - 1].style.display = 'block';
-                // Thay đổi slide sau mỗi 3 giây (3000ms)
-                setTimeout(showSlides, 3000);}
-            // Khởi động slideshow
-            showSlides();
-        </script>
+        <script src="slideShow.js"></script>
     </nav>
     <main>
         <section class="products" >
@@ -381,10 +309,11 @@
     </main>
     <footer>
         <div class="info">
-        <p><b>Trụ sở chính:</b> 35 – 37 Hồ Hảo Hớn, Phường Cô Giang, Quận 1, TP. HCM.</p>
-        <p><b>Địa chỉ liên hệ: </b>Khu dân cư Nhơn Đức, huyện Nhà Bè, TP.HCM</p>
-        <p><b>Điện thoại liên hệ: </b>028 3836 4748</p>
-        <p><b>Email: </b><a href="mailto:Fun0hFood@gmail.com?subject=Góp Ý">Fun0hFood@gmail.com</a></p>
+            <p><b>THÔNG TIN LIÊN HỆ</b></p>
+            <p><b>Trụ sở chính:</b> 35 – 37 Hồ Hảo Hớn, Phường Cô Giang, Quận 1, TP. HCM.</p>
+            <p><b>Địa chỉ liên hệ: </b>Khu dân cư Nhơn Đức, huyện Nhà Bè, TP.HCM</p>
+            <p><b>Điện thoại liên hệ: </b>028 3836 4748</p>
+            <p><b>Email: </b><a href="mailto:Fun0hFood@gmail.com?subject=Góp Ý">Fun0hFood@gmail.com</a></p>
         <div>
             <img src="img/logo.png" alt="logo">
         </div>
