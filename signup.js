@@ -1,10 +1,11 @@
 // validation form register and register user local storage
-const inputUsernameRegister = document.querySelector(".username");
-const inputPasswordRegister = document.querySelector(".password");
-const inputConfirmpassword =document.querySelector(".confirm")
+const inputUsernameRegister = document.querySelector(".input-signup-username");
+const inputPasswordRegister = document.querySelector(".input-signup-password");
+const inputConfirmpassword =document.querySelector(".input-signup-Confirmpw")
+const inputname =document.querySelector(".input-signup-name")
 const random = Math.floor(Math.random() * 6) + 1; // Số ngẫu nhiên từ 1 đến 10
 
-const btnRegister = document.querySelector(".signup");
+const btnRegister = document.querySelector(".signup__signInButton");
 
 // validation form register and register user local storage
 
@@ -26,6 +27,7 @@ btnRegister.addEventListener("click", (e) => {
     let users = JSON.parse(localStorage.getItem("users")) || [];
     const maxId = getMaxId(users);
     const user = {
+      name:inputname.value,
       username: inputUsernameRegister.value,
       password: inputPasswordRegister.value,
       role:"",

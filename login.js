@@ -1,7 +1,7 @@
 // validation form login
-const inputUsername = document.querySelector(".username");
-const inputPassword = document.querySelector(".password");
-const btnLogin = document.querySelector(".login");
+const inputUsername = document.querySelector(".input-login-username");
+const inputPassword = document.querySelector(".input-login-password");
+const btnLogin = document.querySelector(".login__signInButton");
 
 // validation form login
 
@@ -18,7 +18,7 @@ btnLogin.addEventListener("click", (event) => {
       if (foundUser.password === inputPassword.value) {
         alert("Đăng Nhập Thành Công");
         localStorage.setItem("current user",JSON.stringify(foundUser));
-        window.location.href = "index.html";
+        window.location.href = "/html/index.html";
       } else {
         alert("Đăng Nhập Thất Bại");
       }

@@ -9,14 +9,33 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
+    <div class="menu flex">
+        <h>
+            <a href="index.html"><img src="img/brand.png" alt="brand"></a>
+        </h>
+        <div class="search flex" id="searchForm">
+            <input type="search" id="searchInput" placeholder="Tìm món ăn" >
+            <div><input type="submit" name="timkiem" value="Tìm kiếm"></div>
+            <script src="search.js"></script>
+        </div >
+        <div class="cart"><i class="fas fa-shopping-cart"></i></div>
+        <div class="user">
+            <i class="fas fa-user-circle"></i>
+            <h><a href="dangki.html">Đăng ký</a> / <a href="dangnhap.html">Đăng nhập</a></h>
+        </div>
+    </div>
     <div class="login">
         <h2>Đăng nhập</h2>
         <p>Tài Khoản</p>
-        <input class="username" type="text" placeholder="Nhập tài khoản">
+        <input type="text" placeholder="Nhập tài khoản">
         <p>Mật khẩu</p>
-        <input class="password" type="password" placeholder="Nhập mật khẩu">
-        <button class="login">Đăng nhập</button>
-        <script src="login.js"></script>
+        <input type="password" placeholder="Nhập mật khẩu">
+        <div class="check">
+            <input type="checkbox">
+            Remember me
+        </div>
+        <button >Đăng nhập</button>
+        <script src="signup.js"></script>
         <a href="dangki.html">Đăng kí</a> 
     </div>
 </body>
