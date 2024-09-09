@@ -38,6 +38,11 @@ header{
 .menu>div.user{
     margin-left: auto;
 }
+
+.menu>div.user>h a{
+    text-decoration: none;
+    color: black;
+}
 .menu>div.cart{
     font-size: 20px;
     border-radius: 50%;
@@ -231,14 +236,9 @@ a#goTop>img{
 /*DANG NHAP/DANG KI*/
 
 /*LOGIN*/
-body{
-    font-family: sans-serif;
-}
 .login{
 width: 300px;
 height: 350px;
-background-color: white;
-border: 1px solid grey;
 border-radius: 10px;
 text-align: center;
 margin:0 auto ;
@@ -246,6 +246,7 @@ margin:0 auto ;
 .login h2{
     display: inline-block;
     color: grey;
+
 }
 .login input{
     width: 200px;
@@ -268,12 +269,11 @@ margin:0 auto ;
     border-radius: 5px;
     background-color: #ea320d;
     color: white;
+    cursor: pointer;
 }
-p{
-    display: inline-block;
-    float:left;
-    padding-left: 40px;
-    margin: 0px;
+
+.login button:hover{
+    background-color: #fc6749;
 }
 .check{
     float:left;
