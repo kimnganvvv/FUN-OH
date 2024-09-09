@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUN~OH</title>
+    <link rel="stylesheet" href="food.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="food.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#goTop").hide()
+
+            $(window).scroll(function () {
+
+                if ($(this).scrollTop() >= 220)
+                    $("header").css({
+                        "position": "fixed",
+                        "left": 0,
+                        "right": 0,
+                        "top": 0,
+                        "z-index": 1000
+                    })
+                else
+                    $("header").css({
+                        "position": "relative",
+                        "left": 0,
+                        "right": 0,
+                        "top": 0,
+                        "z-index": 1000
+                    })
+
+
+                if ($(this).scrollTop() >= 150)
+                    $("#goTop").show("flow")
+                else
+                    $("#goTop").hide("flow")
+
+            })
+
+            $("#goTop").click(function () {
+                $("html, body").animate({
+                    scrollTop: 0
+                }, 800);
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div>
+        <a id="goTop" href="javascript:;"><img src="/img/top.png" alt="top"></a>
+    </div>
+    <header>
+
+        <div class="menu flex">
+            <h>
+                <a href="food.html"><img src="/img/brand.png" alt="brand"></a>
+            </h>
+            
+            <div class="cart"><i class="fas fa-shopping-cart"></i></div>
+            <div class="user">
+                <i class="fas fa-user-circle"></i>
+                <h><a href="dangki.html">Đăng ký</a> / <a href="dangnhap.html">Đăng nhập</a></h>
+            </div>
+        </div>
+        <div class="home flex">
+            <h><a href="#"><img src="/img/logo.png" alt="logo"></a></h>
+            <div><a href="#">Thức uống</a></div>
+            <div><a href="#">Cơm hộp</a></div>
+            <div><a href="#">Mì phở</a></div>
+            <div><a href="#">Tráng miệng</a></div>
+            <div><a href="#">Khác</a></div>
+        </div>
+
+    </header>
+    <main class="flex">
+        <section class="flex">
+            <div class="imgproduct">
+                <img src="img/trasua.jpg" alt="brand">
+            </div>
+            <div class="detail">
+                <h1>Trà Sữa Trân Châu Đen</h1>
+                <h3>Trà Sữa Gong Cha - 貢茶 - Phan Văn Trị</h3>
+
+                <span class="dong"><sup><u>đ</u></sup></span><span class="price">47.000</span>
+                <br></br>
+                <a>507 Phan Văn Trị, P. 5, Gò Vấp, TP. HCM</a>
+                <div class="flex bottom" >
+                    <div class="flex" id="order">
+                        <a href="#" id="minus"><i class="fa-solid fa-minus"></i></a>
+                        <p id="sl">0</p>
+                        <a href="#" id="plus"><i class="fa-solid fa-plus"></i></a>
+                    </div>
+                    <a class="dathang" href="#">ĐẶT HÀNG</a>
+                </div>
+
+                
+
+            </div>
+
+
+        </section>
+
+    </main>
+    <footer>
+        <div class="info flex">
+            <p><b>Trụ sở chính:</b> 35 – 37 Hồ Hảo Hớn, Phường Cô Giang, Quận 1, TP. HCM.</p>
+            <p><b>Địa chỉ liên hệ: </b>Khu dân cư Nhơn Đức, huyện Nhà Bè, TP.HCM</p>
+            <p><b>Điện thoại liên hệ: </b>028 3836 4748</p>
+            <p><b>Email: </b><a href="mailto:Fun0hFood@gmail.com?subject=Góp Ý">Fun0hFood@gmail.com</a></p>
+            <div>
+                <img src="/img/logo.png" alt="logo">
+            </div>
+            <p>&copy FUN~OH 2024</p>
+        </div>
+    </footer>
+</body>
+
+</html>
