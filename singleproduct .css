@@ -281,6 +281,9 @@ a#goTop>img {
 
 .imgproduct img{
     border-radius: 10px;
+    width: 50%;
+    margin-top: 3rem;
+    margin-left: 5rem;
 }
 
 section {
