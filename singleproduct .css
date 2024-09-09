@@ -29,31 +29,6 @@ header {
     width: 30%;
 }
 
-.menu>div.search {
-    position: absolute;
-    left: 55%;
-}
-
-.menu>div.search>div {
-    height: 11px;
-    padding: 10px;
-    border: 1.5px solid white;
-    border-radius: 0 4px 4px 0;
-    position: relative;
-    background-color: #ea320d;
-    left: 0;
-}
-
-.menu>div.search>input {
-    height: 30px;
-    width: 200px;
-    border-right: none;
-    border: 1px solid white;
-    border-radius: 4px 0 0 4px;
-    font-size: 15px;
-    margin: 1.5px;
-}
-
 .menu>div.user {
     margin-left: auto;
 }
@@ -74,97 +49,6 @@ header {
 
 }
 
-/*HOME*/
-
-.home {
-    margin: 0 6% 0 6%;
-    background-color: white;
-    padding: 10px;
-}
-
-.home>h img {
-    width: 50px;
-    padding-right: 20px;
-}
-
-.home>div>a {
-    display: block;
-    text-decoration: none;
-    padding: 10px;
-    color: black;
-    margin: 2px;
-}
-
-.home>div {
-    list-style-type: none;
-    text-align: center;
-    width: 18.5%;
-    font-size: 15px;
-}
-
-.home>div>a:hover {
-    color: #ea320d;
-    background-color: rgb(202, 205, 204);
-    border-radius: 10px 10px 0 0;
-}
-
-.active {
-    color: #ea320d !important;
-    background-color: rgb(202, 205, 204);
-    border-radius: 10px 10px 0 0;
-}
-
-/*NAV*/
-/* styles.css */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-.slideshow {
-    position: relative;
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-}
-
-.slide {
-    display: none;
-}
-
-img {
-    width: 100%;
-    height: auto;
-}
-
-/* Fade effect */
-.fade {
-    -webkit-animation: fade 1.5s ease-in-out;
-    animation: fade 1.5s ease-in-out;
-}
-
-@-webkit-keyframes fade {
-    from {
-        opacity: .4
-    }
-
-    to {
-        opacity: 1
-    }
-}
-
-@keyframes fade {
-    from {
-        opacity: .4
-    }
-
-    to {
-        opacity: 1
-    }
-}
-
-
 /*FOOTER*/
 .info {
     flex-direction: column;
@@ -180,113 +64,16 @@ img {
     font-size: 12px;
 }
 
-/*MAIN*/
-/*SECTION*/
-.products>div {
-    margin: 20px;
-}
-
-.products>div>p {
-    border: 1px solid rgb(199, 198, 198);
-    padding: 8px;
-}
-
-.products {
-    margin: 0 5% 0 5%;
-}
-
-.product {
-    width: 25%;
-    box-sizing: border-box;
-    padding: 15px;
-}
-
-.product>div {
-    border-radius: 4px;
-    position: relative;
-    border: 1px ridge rgb(215, 214, 214);
-    background-color: rgb(243, 239, 238);
-}
-
-.product>div>img {
-    width: 100%;
-    border-radius: 4px 4px 0 0;
-}
-
-.product>div>div {
-    margin: 15px;
-    border-top: 1px ridge rgb(215, 214, 214);
-}
-
-.product>div>div>p {
-    font-size: 12px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.product>div>div>p:first-child {
-    font-weight: bold;
-    font-size: 15px;
-}
-
-.product>div>div>p:last-child {
-    color: gray;
-    font-weight: lighter;
-    font-size: 10px;
-}
-
-.product>div:hover {
-    box-shadow: 1px 1px 1px 1px rgb(218, 215, 215);
-}
-
-.discount {
-    font-size: 12px;
-    color: red;
-    background-color: #f7dfda;
-    padding: 3px;
-    position: relative;
-    border-radius: 2px;
-    left: 5px;
-}
-
-.price {
-    color: red;
-    font-size: 15px;
-}
-
-.dong {
-    font-size: 12px;
-    padding: 2px;
-    color: red;
-}
-
-/*GO TOP*/
-a#goTop>img {
-    border-image: 50%;
-    width: 4%;
-    display: block;
-    position: fixed;
-    bottom: 40px;
-    right: 10px;
-    z-index: 1000;
-}
-
 /*singleproduct*/
-.imgproduct {
-    width: 30%;
-    padding: 0;
-    margin: 0;
-}
 
 .imgproduct img{
     border-radius: 10px;
-    width: 50%;
+    margin-top: 10%;
 }
 
 section {
     flex-wrap: nowrap;
-    width: 70% !important;
+    width: 40% !important;
     justify-content: center;
     margin: auto;
 }
@@ -313,12 +100,9 @@ section {
 }
 #order {
     background-color:rgba(0, 0, 0, 0.3);
-    padding: 0.5rem;
-    width: 100px;
-    height: 30px;
+    width: 80px;
     border-radius: 5px;
     justify-content: space-between;
-    align-items: center;
 }
 #order>a{
     color: black;
@@ -327,8 +111,7 @@ section {
 }
 #order>p{
     color: black;
-    padding:0;
-    
+    padding: 0;
 }
 .detail>a{
     display: block;
@@ -339,19 +122,12 @@ section {
 
 }
 .dathang{
-    margin-top: 1rem;
-    background-color:rgba(0, 0, 0, 0.3);
-    width: 100px;
-    padding: 0.5rem;
-    margin-left: 1rem;
-    margin-bottom: 0.9rem;
-    height: 30px;
+    background-color:#ea320d;
     border-radius: 5px;
     text-align: center;
-    padding-top: 0.6rem;
     display: block;
     text-decoration: none;
-    color: black;
+    color: rgb(248, 246, 246);
 }
 footer{
     margin-top: 15rem;
@@ -385,12 +161,10 @@ footer{
         align-items: center;
     }
     #order{
-        padding:0.5rem;
-        margin-right:1rem;
+        margin-right:2rem;
     }
     .dathang{
-        padding:0.5rem;
-        margin-bottom: 1rem;
+        padding:1rem;
     }
     footer{
         margin-top: 5rem;

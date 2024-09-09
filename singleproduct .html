@@ -11,65 +11,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="food .js"></script>
-    <script>
-        $(document).ready(function () {
-            $("#goTop").hide()
-
-            $(window).scroll(function () {
-
-                if ($(this).scrollTop() >= 100)
-                    $("header").css({
-                        "position": "fixed",
-                        "left": 0,
-                        "right": 0,
-                        "top": 0,
-                        "z-index": 1000
-                    })
-                else
-                    $("header").css({
-                        "position": "relative",
-                        "left": 0,
-                        "right": 0,
-                        "top": 0,
-                        "z-index": 1000
-                    })
-
-
-                if ($(this).scrollTop() >= 100)
-                    $("#goTop").show("flow")
-                else
-                    $("#goTop").hide("flow")
-
-            })
-
-            $("#goTop").click(function () {
-                $("html, body").animate({
-                    scrollTop: 0
-                }, 800);
-            })
-        })
-    </script>
 </head>
 
 <body>
-    <div>
-        <a id="goTop" href="javascript:;"><img src="img/top.png" alt="top"></a>
-    </div>
     <header>
 
         <div class="menu flex">
             <h>
                 <a href="index.html"><img src="img/brand.png" alt="brand"></a>
             </h>
-            
             <div class="cart"><i class="fas fa-shopping-cart"></i></div>
             <div class="user">
                 <i class="fas fa-user-circle"></i>
                 <h><a href="dangki.html">Đăng ký</a> / <a href="dangnhap.html">Đăng nhập</a></h>
             </div>
         </div>
-        
-
     </header>
     <main class="flex">
         <section class="flex">
@@ -103,6 +59,7 @@
     </main>
     <footer>
         <div class="info flex">
+            <p><b>THÔNG TIN LIÊN HỆ</b></p>
             <p><b>Trụ sở chính:</b> 35 – 37 Hồ Hảo Hớn, Phường Cô Giang, Quận 1, TP. HCM.</p>
             <p><b>Địa chỉ liên hệ: </b>Khu dân cư Nhơn Đức, huyện Nhà Bè, TP.HCM</p>
             <p><b>Điện thoại liên hệ: </b>028 3836 4748</p>
