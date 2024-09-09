@@ -28,20 +28,6 @@ header{
     width: 30% ;
 }
 
-.menu>div.search{
-    position: absolute;
-    left: 55%;
-}
-.menu>.search>input:first-child{
-    height: 25px;
-    width: 200px;
-   border-right: none;
-   border: 1px solid white;
-   border-radius: 2px;
-   font-size: 15px;
-   margin:2px;
-}
-
 .menu>div.user{
     margin-left: auto;
 }
