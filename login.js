@@ -18,7 +18,7 @@ btnLogin.addEventListener("click", (event) => {
       if (foundUser.password === inputPassword.value) {
         alert("Đăng Nhập Thành Công");
         localStorage.setItem("current user",JSON.stringify(foundUser));
-        window.location.href = "/html/index.html";
+        window.location.href = "index.html";
       } else {
         alert("Đăng Nhập Thất Bại");
       }
