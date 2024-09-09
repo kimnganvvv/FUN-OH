@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FUN~OH</title>
     <link rel="stylesheet" href="food.css">
+    <link rel="stylesheet" href="singleproduct.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -16,7 +17,7 @@
 
             $(window).scroll(function () {
 
-                if ($(this).scrollTop() >= 220)
+                if ($(this).scrollTop() >= 100)
                     $("header").css({
                         "position": "fixed",
                         "left": 0,
@@ -34,7 +35,7 @@
                     })
 
 
-                if ($(this).scrollTop() >= 150)
+                if ($(this).scrollTop() >= 100)
                     $("#goTop").show("flow")
                 else
                     $("#goTop").hide("flow")
@@ -69,6 +70,7 @@
         </div>
         <div class="home flex">
             <h><a href="#"><img src="/img/logo.png" alt="logo"></a></h>
+            <div><a href="#">Món ăn</a></div>
             <div><a href="#">Thức uống</a></div>
             <div><a href="#">Cơm hộp</a></div>
             <div><a href="#">Mì phở</a></div>
