@@ -39,7 +39,23 @@
             <div><a href="#noodle">Mì phở</a></div>
             <div><a href="#desert">Tráng miệng</a></div>
             <div><a href="#other">Khác</a></div>
-            <script src="product.js"></script>
+            <script>
+                $(document).ready(function(){
+                    $("div.home>div>a").click(function(){
+                        event.preventDefault()
+                        //xu ly tab
+                        $("div.home>div>a").removeClass("active")
+                        $(this).addClass("active")
+
+                        //xu ly content
+                        var home=$(this).attr("href")
+                        $(".products>div>p").hide()
+                        $(".products>div>div").hide()
+                        $(".slideshow").hide()
+                        $(home).show()
+                    })
+                })
+            </script>
         </div> 
     </header>
     <nav>
@@ -57,7 +73,27 @@
                 <img src="img/khucbach.jpg" alt="khucbachsieudao">
             </div>
         </div>
-        <script src="slideShow.js"></script>
+        <script>
+            let slideIndex = 0;
+            const slides = document.querySelectorAll('.slide');
+            function showSlides() {
+                // Ẩn tất cả các slide
+                slides.forEach((slide) => {
+                    slide.style.display = 'none';
+                });
+                // Tăng chỉ số slide
+                slideIndex++;
+                // Nếu chỉ số vượt quá số lượng slide, quay lại slide đầu tiên
+                if (slideIndex > slides.length) {
+                    slideIndex = 1;} 
+                // Hiển thị slide hiện tại
+                slides[slideIndex - 1].style.display = 'block';
+                // Thay đổi slide sau mỗi 3 giây (3000ms)
+                setTimeout(showSlides, 3000);
+            }
+            // Khởi động slideshow
+            showSlides();
+        </script>
     </nav>
     <main>
         <section class="products" >
