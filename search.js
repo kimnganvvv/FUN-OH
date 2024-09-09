@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     searchButton.addEventListener('click', function() {
         const searchTerm = searchInput.value.toLowerCase();
         $(".slideshow").hide()
+        $(".products>div>p").hide()
         products.forEach(function(item) {
             if (item.innerText.toLowerCase().includes(searchTerm)) {
                 flag=1;

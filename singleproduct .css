@@ -68,12 +68,12 @@ header {
 
 .imgproduct img{
     border-radius: 10px;
-    margin-top: 10%;
+    margin-top: 5%;
 }
 
 section {
     flex-wrap: nowrap;
-    width: 40% !important;
+    width: 25% !important;
     justify-content: center;
     margin: auto;
 }
@@ -128,9 +128,6 @@ section {
     display: block;
     text-decoration: none;
     color: rgb(248, 246, 246);
-}
-footer{
-    margin-top: 15rem;
 }
 @media screen and (max-width:1400px) {
     main{
