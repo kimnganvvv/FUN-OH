@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (item.innerText.toLowerCase().includes(searchTerm)) {
                 flag=1;
                 item.style.display = 'block';
+
             } else {
                 item.style.display = 'none';
             }
